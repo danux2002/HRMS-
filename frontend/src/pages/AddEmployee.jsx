@@ -198,9 +198,7 @@ const AddEmployee = () => {
                       <option value="" hidden></option>
                       <option value="male">Male</option>
                       <option value="female">Female</option>
-                      <option value="prefer-not-to-say">
-                        Prefer not to say
-                      </option>
+                      
                       <option value="other">Other</option>
                     </Form.Select>
                   </InputGroup>
@@ -288,6 +286,7 @@ const AddEmployee = () => {
                     <Form.Select
                       name="Department_ID"
                       onChange={handleChange}
+                      value={employeeData.Department_ID}
                       required
                     >
                       <option value="" disabled>
