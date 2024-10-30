@@ -1,8 +1,11 @@
 import axios from "axios";
 import Cookies from "js-cookie";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:8800/api/",
+  baseURL: `https://${process.env.HOST}:${process.env.PORT}/api/`,
 });
 
 // Add a request interceptor to include the token in every request
